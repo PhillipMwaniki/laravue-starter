@@ -78,7 +78,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="#" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Active Page</p>
                 </a>
@@ -92,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
           </li>
             <li class="nav-item has-treeview">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cog"></i>
               <p>
                 Management
@@ -113,7 +113,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link active">
+                <a href="./index3.html" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Dashboard v3</p>
                 </a>
