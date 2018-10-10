@@ -15,8 +15,13 @@ Vue.component(HasError.name, HasError);
 Vue.component(AlertError.name, AlertError);
 
 import VueProgressBar from 'vue-progressbar'
+import swal from 'sweetalert2';
+
 
 import VueRouter from 'vue-router';
+
+window.swal = swal;
+
 
 Vue.use(VueRouter);
 
@@ -31,8 +36,15 @@ const options = {
   }
 }
 
-Vue.use(VueProgressBar, options)
+Vue.use(VueProgressBar, options);
 
+const toast = swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmationButton: false,
+    timer: 3000
+});
+window.toast = toast;
 
 let routes = [
     { path: '/dashboard', component: require('./components/Dashboard.vue') },

@@ -119,8 +119,12 @@ export default {
         },
         methods: {
             createuser() {
-                this.$Progress.start();
+                    this.$Progress.start();
                     this.form.post('api/users');
+                    toast({
+                        type: 'success',
+                        title: 'Signed in successfully'
+                    });
                     this.$Progress.finish();
                 },
                 loadUsers() {
