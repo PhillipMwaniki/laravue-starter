@@ -119,7 +119,9 @@ export default {
         },
         methods: {
             createuser() {
+                this.$Progress.start();
                     this.form.post('api/users');
+                    this.$Progress.finish();
                 },
                 loadUsers() {
                     axios.get('api/users').then(({
