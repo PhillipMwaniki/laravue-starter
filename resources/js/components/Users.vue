@@ -121,6 +121,7 @@ export default {
             createuser() {
                     this.$Progress.start();
                     this.form.post('api/users');
+                    $('#addNew').modal('hide');
                     toast({
                         type: 'success',
                         title: 'Signed in successfully'
@@ -135,6 +136,7 @@ export default {
         },
         created() {
             this.loadUsers();
+            setInterval(() => this.loadUsers(), 3000);
         }
 };
 
