@@ -121,6 +121,7 @@ export default {
             createuser() {
                     this.$Progress.start();
                     this.form.post('api/users');
+                    Fire.$emit('AfterCreate');
                     $('#addNew').modal('hide');
                     toast({
                         type: 'success',
@@ -136,7 +137,9 @@ export default {
         },
         created() {
             this.loadUsers();
-            setInterval(() => this.loadUsers(), 3000);
+            Fire.$on('AfterCreate', () => this.loadUsers());
+            // setInterval(() => this.loadUsers(), 3000);
+
         }
 };
 
